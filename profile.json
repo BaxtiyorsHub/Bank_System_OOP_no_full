@@ -1,0 +1,24 @@
+[
+  {
+    "id": "05e03f44-cb12-4977-bfcc-1419ed0e80af",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-02-24T21:34:08.644192400",
+    "name": "Maruf",
+    "phone": "8888",
+    "password": "8888",
+    "balance": 0.0,
+    "role": "USER"
+  },
+  {
+    "id": "15e03f44-cb12-4977-bfcc-1419ed0e80af",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-02-24T21:34:08.644192400",
+    "name": "Admin",
+    "phone": "1111",
+    "password": "1111",
+    "balance": 0.0,
+    "role": "ADMIN"
+  }
+]
