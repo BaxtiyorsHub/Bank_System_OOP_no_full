@@ -20,5 +20,27 @@
     "password": "1111",
     "balance": 0.0,
     "role": "ADMIN"
+  },
+  {
+    "id": "f811ea10-aff6-4afb-a210-cdce89796bf0",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-02-26T22:12:50.003144700",
+    "name": "Alisher",
+    "phone": "5555",
+    "password": "5555",
+    "balance": 0.0,
+    "role": "USER"
+  },
+  {
+    "id": "5daf622b-ccba-48d9-a73e-c19ee1d5ac04",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-02-27T23:03:13.078097900",
+    "name": "Baxtiyor",
+    "phone": "11",
+    "password": "11",
+    "balance": 0.0,
+    "role": "USER"
   }
 ]

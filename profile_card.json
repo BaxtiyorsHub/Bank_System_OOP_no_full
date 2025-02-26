@@ -1,0 +1,80 @@
+[
+  {
+    "id": "4bfdd6a7-f32f-4035-8c6f-c187461329a9",
+    "profile": {
+      "id": "f811ea10-aff6-4afb-a210-cdce89796bf0",
+      "status": "ACTIVE",
+      "visible": true,
+      "createdDate": "2025-02-26T22:12:50.003144700",
+      "name": "Alisher",
+      "phone": "5555",
+      "password": "5555",
+      "balance": 0.0,
+      "role": "USER"
+    },
+    "card": {
+      "id": "e03f96dd-188f-4ea2-8b2b-599ad50bcbb4",
+      "status": "ACTIVE",
+      "visible": true,
+      "createdDate": "2025-02-25T18:44:23.100626100",
+      "card": "8600696400765292",
+      "expiredDate": "03/27",
+      "password": null,
+      "used": "USED",
+      "balance": 887600.0
+    },
+    "createdDate": "2025-02-26T22:19:06.627914300"
+  },
+  {
+    "id": "9fc9ffa4-2aa5-4fd5-accc-1c4dc1683010",
+    "profile": {
+      "id": "5daf622b-ccba-48d9-a73e-c19ee1d5ac04",
+      "status": "ACTIVE",
+      "visible": true,
+      "createdDate": "2025-02-27T23:03:13.078097900",
+      "name": "Baxtiyor",
+      "phone": "11",
+      "password": "11",
+      "balance": 0.0,
+      "role": "USER"
+    },
+    "card": {
+      "id": "e03f96dd-188f-4ea2-8b2b-599ad50bcbb4",
+      "status": "ACTIVE",
+      "visible": true,
+      "createdDate": "2025-02-25T18:44:23.100626100",
+      "card": "8600696400765292",
+      "expiredDate": "03/27",
+      "password": null,
+      "used": "USED",
+      "balance": 10000.0
+    },
+    "createdDate": "2025-02-27T23:16:34.367073700"
+  },
+  {
+    "id": "1371885b-9670-4120-9f00-bce1963abd99",
+    "profile": {
+      "id": "5daf622b-ccba-48d9-a73e-c19ee1d5ac04",
+      "status": "ACTIVE",
+      "visible": true,
+      "createdDate": "2025-02-27T23:03:13.078097900",
+      "name": "Baxtiyor",
+      "phone": "11",
+      "password": "11",
+      "balance": 0.0,
+      "role": "USER"
+    },
+    "card": {
+      "id": "63895f03-92b6-40c7-90ad-1b12d7d0127c",
+      "status": "ACTIVE",
+      "visible": true,
+      "createdDate": "2025-02-26T22:13:00.565267300",
+      "card": "9860012106969012",
+      "expiredDate": "03/26",
+      "password": "111",
+      "used": "USED",
+      "balance": 989800.0
+    },
+    "createdDate": "2025-02-27T23:24:43.704927100"
+  }
+]

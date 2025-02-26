@@ -2,6 +2,8 @@ package org.example.controller;
 
 import org.example.dto.ProfileRequest;
 import org.example.entity.CardEntity;
+import org.example.entity.ProfileEntity;
+import org.example.entity.TransactionEntity;
 import org.example.service.CardService;
 import org.example.service.ProfileService;
 
@@ -25,7 +27,7 @@ public class CardController {
         return cardService.notActiveCards();
     }
 
-    public List<ProfileRequest.CardResponce> profileCards(UUID id) {
-
+    public List<CardEntity> profileCards(ProfileEntity profile) {
+        return profileService.profileCards(profile);
     }
 }
