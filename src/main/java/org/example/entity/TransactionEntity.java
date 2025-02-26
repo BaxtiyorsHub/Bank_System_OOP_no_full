@@ -1,20 +1,18 @@
 package org.example.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
-@ToString
-
 public class TransactionEntity {
-    private String transactionId;
-    private String comment;
-    private LocalDateTime date;
-    private Boolean visible;
-    private ProfileEntity profile;
-    private CardEntity card;
+    private CardEntity senderCard;
+    private ProfileEntity senderProfile;
+    private CardEntity receiverCard;
+    private ProfileEntity receiverProfile;
+    private String createdDate = LocalDateTime.now().toString();
+    private Double amount;
+    private Double commission;
 }

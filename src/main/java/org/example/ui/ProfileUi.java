@@ -4,12 +4,13 @@ import org.example.controller.CardController;
 import org.example.controller.ProfileController;
 import org.example.controller.TransactionController;
 import org.example.dto.ProfileRequest;
+import org.example.entity.CardEntity;
 import org.example.entity.ProfileEntity;
 import org.example.enums.ProfileRole;
 import org.example.util.ScannerUtil;
 
+import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
 public class ProfileUi {
     private final ProfileController profileController = new ProfileController();
@@ -27,35 +28,56 @@ public class ProfileUi {
 
     private void userStart(ProfileEntity entity) {
         while (true) {
-            switch (userMenu()){
-                case 1 -> myCards(entity.getId());
-                case 2 -> changePassword();
-                case 3 -> myTransactions();
+            switch (userMenu()) {
+                case 1 -> myCards(entity);
+                case 2 -> changePassword(entity);
+                case 3 -> myTransactions(entity);
                 case 4 -> editMyProfile();
-                case 5 -> makeTransaction();
-                case 0 -> {return;}
+                case 5 -> makeTransaction(entity);
+                case 6 -> addCard(entity);
+                case 0 -> {
+                    return;
+                }
             }
         }
     }
 
-    private void makeTransaction() {
+    private void addCard(ProfileEntity entity) {
+        System.out.print("Enter card number : ");
+        String card = ScannerUtil.SCANNER_STR.next();
+        boolean t = profileController.addCard(card,entity);
+        System.out.println(t);
+    }
 
+    private void makeTransaction(ProfileEntity entity) {
+        System.out.print("Enter your card number: ");
+        String cardNum = ScannerUtil.SCANNER_STR.next();
+        System.out.print("Enter card number of receiver: ");
+        String receiverCardNum = ScannerUtil.SCANNER_STR.next();
+        System.out.println("Enter the amount of money you want to send: ");
+        Double money = ScannerUtil.SCANNER_NUM.nextDouble();
+        transactionController.makeTransaction(entity, cardNum, receiverCardNum, money);
     }
 
     private void editMyProfile() {
 
     }
 
-    private void myTransactions() {
+    private void myTransactions(ProfileEntity entity) {
 
     }
 
-    private void changePassword() {
-
+    private void changePassword(ProfileEntity entity) {
+        System.out.print("Enter card : ");
+        String cardNum = ScannerUtil.SCANNER_STR.next();
+        System.out.print("Enter password : ");
+        String password = ScannerUtil.SCANNER_STR.next();
+        profileController.changePassword(cardNum,password,entity);
     }
 
-    private void myCards(UUID id) {
-        cardController.profileCards(id);
+    private void myCards(ProfileEntity profile) {
+        List<CardEntity> cards = cardController.profileCards(profile);
+        cards.forEach(System.out::println);
     }
 
     private void adminStart(ProfileEntity entity) {
@@ -115,7 +137,7 @@ public class ProfileUi {
         return sb.toString();
     }
 
-    private String register(ProfileRequest request) {
+    public String register(ProfileRequest request) {
         return profileController.register(request);
     }
 
@@ -129,6 +151,7 @@ public class ProfileUi {
         System.out.print("O.Exit :");
         return ScannerUtil.SCANNER_NUM.nextInt();
     }
+
     private int userMenu() {
         System.out.println("""
                 1. My cards
@@ -136,6 +159,7 @@ public class ProfileUi {
                 3. My transactions
                 4. My profile
                 5. Make Transaction
+                6. Add Card
                 0. Exit->""");
         return ScannerUtil.SCANNER_NUM.nextInt();
     }

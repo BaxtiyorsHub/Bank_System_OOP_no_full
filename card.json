@@ -1,20 +1,35 @@
 [
   {
     "id": "56bbb42a-c8b3-47b3-86d4-50e7ec5f12a9",
-    "status": "NOT_ACTIVE",
+    "status": "ACTIVE",
     "visible": true,
     "createdDate": "2025-02-24T21:52:58.723996",
     "card": "9860458860214976",
     "expiredDate": "09/48",
-    "password": null
+    "password": "5555",
+    "used": "USED",
+    "balance": 0.0
   },
   {
     "id": "e03f96dd-188f-4ea2-8b2b-599ad50bcbb4",
-    "status": "NOT_ACTIVE",
+    "status": "ACTIVE",
     "visible": true,
     "createdDate": "2025-02-25T18:44:23.100626100",
     "card": "8600696400765292",
     "expiredDate": "03/27",
-    "password": null
+    "password": null,
+    "used": "USED",
+    "balance": 0.0
+  },
+  {
+    "id": "63895f03-92b6-40c7-90ad-1b12d7d0127c",
+    "status": "NOT_ACTIVE",
+    "visible": true,
+    "createdDate": "2025-02-26T22:13:00.565267300",
+    "card": "9860848349598779",
+    "expiredDate": "03/26",
+    "password": null,
+    "used": null,
+    "balance": 0.0
   }
 ]

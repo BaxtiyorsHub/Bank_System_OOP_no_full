@@ -39,4 +39,12 @@ public class CardRepository {
             throw new RuntimeException(e);
         }
     }
+
+    public void clear(){
+        try {
+            objectMapper.writeValue(file,new ArrayList<CardEntity>());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -19,4 +19,12 @@ public class ProfileController {
     public List<ProfileEntity> allProfiles() {
         return profileService.allProfiles();
     }
+
+    public boolean addCard(String card, ProfileEntity entity) {
+        return profileService.addCard(card,entity);
+    }
+
+    public void changePassword(String cardNum, String password, ProfileEntity entity) {
+        profileService.changePassword(cardNum,password,entity);
+    }
 }
