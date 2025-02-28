@@ -76,7 +76,11 @@ public class ProfileUi {
     }
 
     private void myCards(ProfileEntity profile) {
-        cardController.profileCards(profile).forEach(System.out::println);
+        try {
+            cardController.profileCards(profile).forEach(System.out::println);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void adminStart(ProfileEntity entity) {

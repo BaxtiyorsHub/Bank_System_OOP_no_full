@@ -67,8 +67,8 @@ public class ProfileCardService {
     public List<CardEntity> profileCards(ProfileEntity profile) {
         List<ProfileCardEntity> list = profileCardRepository.readData()
                 .stream()
-                .filter(pc -> pc.getProfile().equals(profile))
+                .filter(pc -> pc.getProfile().getId().equals(profile.getId()))
                 .toList();
-        return null;
+        return list.stream().map(ProfileCardEntity::getCard).toList();
     }
 }
