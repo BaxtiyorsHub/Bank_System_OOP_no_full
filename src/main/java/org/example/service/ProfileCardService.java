@@ -52,7 +52,7 @@ public class ProfileCardService {
         List<ProfileCardEntity> list = profileCardRepository.readData().stream()
                 .filter(p -> {
                     if (p.getCard().getCard().equals(sender.getCard().getCard())) {
-                        p.getCard().setBalance(p.getCard().getBalance() - money * 1.02);
+                        p.getCard().setBalance(p.getCard().getBalance() - money*1.02);
                         return true;
                     } else if (p.getCard().getCard().equals(receiver.getCard().getCard())) {
                         p.getCard().setBalance(p.getCard().getBalance() + money);

@@ -4,6 +4,7 @@ import org.example.dto.ProfileRequest;
 import org.example.entity.CardEntity;
 import org.example.entity.ProfileEntity;
 import org.example.entity.TransactionEntity;
+import org.example.entity.ProfileEntity;
 import org.example.service.CardService;
 import org.example.service.ProfileService;
 

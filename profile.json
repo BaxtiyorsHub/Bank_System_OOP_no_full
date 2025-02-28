@@ -42,5 +42,16 @@
     "password": "11",
     "balance": 0.0,
     "role": "USER"
+  },
+  {
+    "id": "f811ea10-aff6-4afb-a210-cdce89796bf0",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-02-26T22:12:50.003144700",
+    "name": "Alisher",
+    "phone": "5555",
+    "password": "5555",
+    "balance": 0.0,
+    "role": "USER"
   }
 ]

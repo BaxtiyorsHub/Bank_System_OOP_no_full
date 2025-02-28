@@ -1,7 +1,6 @@
 package org.example.service;
 
-import org.example.entity.ProfileCardEntity;
-import org.example.entity.ProfileEntity;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.entity.TransactionEntity;
 import org.example.repository.TransactionRepository;
 
@@ -9,8 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TransactionService {
-    private final TransactionRepository transactionRepository = new TransactionRepository();
-    private final ProfileCardService profileCardService = new ProfileCardService();
+private final TransactionRepository transactionRepository = new TransactionRepository();
 
     public List<TransactionEntity> allTransaction() {
         return transactionRepository.readData();
