@@ -30,7 +30,7 @@ public class ProfileUi {
                 case 1 -> myCards(entity);
                 case 2 -> changePassword(entity);
                 case 3 -> myTransactions(entity);
-                case 4 -> editMyProfile(entity);
+                case 4 -> editMyProfile(entity); // no full ended
                 case 5 -> makeTransaction(entity);
                 case 6 -> addCard(entity);
                 case 0 -> {

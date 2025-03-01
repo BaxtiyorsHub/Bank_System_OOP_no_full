@@ -87,7 +87,7 @@ public class ProfileService {
         System.out.print("Profile Password ? ");
         String password = ScannerUtil.SCANNER_STR.next();
 
-        List<ProfileEntity>profileEntities = profileRepository.readData();
+        List<ProfileEntity> profileEntities = profileRepository.readData();
         List<ProfileEntity> editedProfiles = new ArrayList<>();
 
         for (ProfileEntity profile : profileEntities) {
@@ -95,11 +95,6 @@ public class ProfileService {
                 profile.setName(name);
                 profile.setPhone(phone);
                 profile.setPassword(password);
-                profile.setRole(profile.getRole());
-                profile.setBalance(profile.getBalance());
-                profile.setStatus(profile.getStatus());
-                profile.setCreatedDate(profile.getCreatedDate());
-                profile.setVisible(profile.getVisible());
                 editedProfiles.add(profile);
             } else {
                 throw new ProfileNotFoundException("Profile not found");
