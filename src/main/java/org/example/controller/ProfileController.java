@@ -27,4 +27,8 @@ public class ProfileController {
     public void changePassword(String cardNum, String password, ProfileEntity entity) {
         profileService.changePassword(cardNum,password,entity);
     }
+
+    public void editProfile(ProfileEntity entity) {
+        profileService.edtiProfile(entity);
+    }
 }

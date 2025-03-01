@@ -1,14 +1,11 @@
 package org.example.service;
 
 import org.example.entity.CardEntity;
-import org.example.entity.ProfileEntity;
 import org.example.enums.Status;
 import org.example.enums.Used;
 import org.example.repository.CardRepository;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class CardService {
     private final CardRepository cardRepository = new CardRepository();

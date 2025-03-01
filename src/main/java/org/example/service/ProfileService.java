@@ -3,18 +3,17 @@ package org.example.service;
 import org.example.dto.ProfileRequest;
 import org.example.entity.CardEntity;
 import org.example.entity.ProfileEntity;
-import org.example.entity.TransactionEntity;
 import org.example.enums.ProfileRole;
 import org.example.enums.Status;
 import org.example.enums.Used;
 import org.example.exp.ProfileNotFoundException;
 import org.example.repository.ProfileRepository;
+import org.example.util.ScannerUtil;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class ProfileService {
     private final ProfileRepository profileRepository = new ProfileRepository();
@@ -73,11 +72,42 @@ public class ProfileService {
         CardEntity card = cardService.getCard(cardNum);
         card.setPassword(password);
         cardService.changePassword(card);
-        profileCardService.changePassword(entity,card);
+        profileCardService.changePassword(entity, card);
     }
 
     public List<CardEntity> profileCards(ProfileEntity profile) {
         return profileCardService.profileCards(profile);
+    }
+
+    public void edtiProfile(ProfileEntity entity) {
+        System.out.print("Name ? ");
+        String name = ScannerUtil.SCANNER_STR.next();
+        System.out.print("Phone ? ");
+        String phone = ScannerUtil.SCANNER_STR.next();
+        System.out.print("Profile Password ? ");
+        String password = ScannerUtil.SCANNER_STR.next();
+
+        List<ProfileEntity>profileEntities = profileRepository.readData();
+        List<ProfileEntity> editedProfiles = new ArrayList<>();
+
+        for (ProfileEntity profile : profileEntities) {
+            if (profile.getId().equals(entity.getId())) {
+                profile.setName(name);
+                profile.setPhone(phone);
+                profile.setPassword(password);
+                profile.setRole(profile.getRole());
+                profile.setBalance(profile.getBalance());
+                profile.setStatus(profile.getStatus());
+                profile.setCreatedDate(profile.getCreatedDate());
+                profile.setVisible(profile.getVisible());
+                editedProfiles.add(profile);
+            } else {
+                throw new ProfileNotFoundException("Profile not found");
+            }
+        }
+        profileEntities.removeIf(p -> p.getId().equals(entity.getId()));
+        profileRepository.save(editedProfiles);
+        System.out.println("SUCCESS");
     }
 }
 

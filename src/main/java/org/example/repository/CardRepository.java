@@ -3,7 +3,6 @@ package org.example.repository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.entity.CardEntity;
-import org.example.entity.ProfileEntity;
 
 import java.io.File;
 import java.io.IOException;

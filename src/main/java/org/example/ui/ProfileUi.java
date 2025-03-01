@@ -4,12 +4,10 @@ import org.example.controller.CardController;
 import org.example.controller.ProfileController;
 import org.example.controller.TransactionController;
 import org.example.dto.ProfileRequest;
-import org.example.entity.CardEntity;
 import org.example.entity.ProfileEntity;
 import org.example.enums.ProfileRole;
 import org.example.util.ScannerUtil;
 
-import java.util.List;
 import java.util.Random;
 
 public class ProfileUi {
@@ -32,7 +30,7 @@ public class ProfileUi {
                 case 1 -> myCards(entity);
                 case 2 -> changePassword(entity);
                 case 3 -> myTransactions(entity);
-                case 4 -> editMyProfile();
+                case 4 -> editMyProfile(entity);
                 case 5 -> makeTransaction(entity);
                 case 6 -> addCard(entity);
                 case 0 -> {
@@ -59,8 +57,14 @@ public class ProfileUi {
         transactionController.makeTransaction(entity, cardNum, receiverCardNum, money);
     }
 
-    private void editMyProfile() {
-
+    private void editMyProfile(ProfileEntity entity) {
+        ProfileRequest profileRequest = new ProfileRequest(
+                entity.getName(),
+                entity.getPhone(),
+                entity.getPassword()
+        );
+        System.out.println(profileRequest);
+        profileController.editProfile(entity);
     }
 
     private void myTransactions(ProfileEntity entity) {

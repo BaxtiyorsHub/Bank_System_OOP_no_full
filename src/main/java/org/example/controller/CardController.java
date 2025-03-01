@@ -1,15 +1,11 @@
 package org.example.controller;
 
-import org.example.dto.ProfileRequest;
 import org.example.entity.CardEntity;
-import org.example.entity.ProfileEntity;
-import org.example.entity.TransactionEntity;
 import org.example.entity.ProfileEntity;
 import org.example.service.CardService;
 import org.example.service.ProfileService;
 
 import java.util.List;
-import java.util.UUID;
 
 public class CardController {
 

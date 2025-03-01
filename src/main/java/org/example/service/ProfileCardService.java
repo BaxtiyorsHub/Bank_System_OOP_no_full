@@ -3,16 +3,13 @@ package org.example.service;
 import org.example.entity.CardEntity;
 import org.example.entity.ProfileCardEntity;
 import org.example.entity.ProfileEntity;
-import org.example.entity.TransactionEntity;
 import org.example.enums.Status;
 import org.example.enums.Used;
-import org.example.repository.CardRepository;
 import org.example.repository.ProfileCardRepository;
 import org.example.repository.TransactionRepository;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class ProfileCardService {
     private final ProfileCardRepository profileCardRepository = new ProfileCardRepository();

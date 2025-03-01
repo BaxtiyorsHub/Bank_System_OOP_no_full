@@ -2,14 +2,12 @@ package org.example.repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.entity.ProfileEntity;
 import org.example.entity.TransactionEntity;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TransactionRepository {
     private final ObjectMapper objectMapper = new ObjectMapper();
