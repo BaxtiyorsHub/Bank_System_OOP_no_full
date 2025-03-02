@@ -88,20 +88,19 @@ public class ProfileService {
         String password = ScannerUtil.SCANNER_STR.next();
 
         List<ProfileEntity> profileEntities = profileRepository.readData();
+
         List<ProfileEntity> editedProfiles = new ArrayList<>();
 
-        for (ProfileEntity profile : profileEntities) {
-            if (profile.getId().equals(entity.getId())) {
+        for (ProfileEntity profile : profileEntities) { // id bilan chek qibomayapdi
+            if (profile.getName().equals(entity.getName()) && profile.getPhone().equals(entity.getPhone())) {
                 profile.setName(name);
                 profile.setPhone(phone);
                 profile.setPassword(password);
                 editedProfiles.add(profile);
-            } else {
-                throw new ProfileNotFoundException("Profile not found");
             }
         }
-        profileEntities.removeIf(p -> p.getId().equals(entity.getId()));
-        profileRepository.save(editedProfiles);
+        profileEntities.removeIf(p -> p.getId().equals(entity.getId())); // id bilan chek qibomayapdi!
+        profileRepository.save(editedProfiles); // profiles lar delete bob ketdi shu joyida qayta yozsihda problem
         System.out.println("SUCCESS");
     }
 }
