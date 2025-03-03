@@ -1,0 +1,35 @@
+[
+  {
+    "id": "282f3c7c-5c6e-4d2c-91a8-c9ccb529490e",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-03-03T08:47:42.393618400",
+    "name": "javlon",
+    "phone": "5595565",
+    "password": "123",
+    "balance": 0.0,
+    "role": "USER"
+  },
+  {
+    "id": "b1448812-c065-4bd6-975a-95a70ae09082",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-03-03T08:48:03.534861100",
+    "name": "Shahzoda",
+    "phone": "123",
+    "password": "123",
+    "balance": 0.0,
+    "role": "USER"
+  },
+  {
+    "id": "2db9d55f-ec9c-46ac-a7cb-c0d41d84697e",
+    "status": "ACTIVE",
+    "visible": true,
+    "createdDate": "2025-03-03T09:10:17.043826200",
+    "name": "Yusupov",
+    "phone": "11",
+    "password": "11",
+    "balance": 0.0,
+    "role": "USER"
+  }
+]

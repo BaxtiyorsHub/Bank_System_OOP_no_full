@@ -100,7 +100,8 @@ public class ProfileService {
             }
         }
         profileEntities.removeIf(p -> p.getId().equals(entity.getId())); // id bilan chek qibomayapdi!
-        profileRepository.save(editedProfiles); // profiles lar delete bob ketdi shu joyida qayta yozsihda problem
+        profileEntities.addAll(editedProfiles);
+        profileRepository.saveEdited(profileEntities); // profiles lar delete bob ketdi shu joyida qayta yozsihda problem
         System.out.println("SUCCESS");
     }
 }

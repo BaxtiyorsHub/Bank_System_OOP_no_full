@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileRepository {
+    private final ProfileCardRepository cardRepository  = new ProfileCardRepository();
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final File file = new File("profile.json");
 
@@ -19,6 +20,14 @@ public class ProfileRepository {
         try {
             objectMapper.writeValue(file,entities);
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void saveEdited(List<ProfileEntity> entity) {
+        cardRepository.save(entity.getFirst());
+        try {
+            objectMapper.writeValue(file,entity);
+        }catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
